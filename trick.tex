@@ -110,55 +110,7 @@
 
 不等式的使用是非常灵活的，实战遇到的情况也非常复杂，不可简单概括。掌握了不等式解局之后，扫雷既不是循环套用公式的休闲游戏，也不是暴力穷举的算力游戏，而是充满战术和策略的益智游戏。
 
-\subsection{环}
-我们在上一小节中看到了用不等式解局的典型例子。这一小节中我们通过不等式解环的例子来进一步拓展思路。
-
-\vspace{5mm}
-\begin{center}
-    \includegraphics{trick/环1.png}
-\end{center}
-用黑框中的11做减法得到$A\ge C$。同理$C\ge D\ge E\ge A$，所以$A=C=D=E$。回到等式$A=C+G$，发现$G=0$。
-
-\vspace{5mm}
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{trick/环2.png}
-\end{center}
-红圈33减法得$A\ge B$，蓝圈22减法得$C\ge A$，绿圈12减法得$D\ge C$，所以$D\ge B$。又因为橙圈3，$B+D\le 1$，所以$B=0$。
-
-\vspace{5mm}
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{trick/环3.png}
-\end{center}
-红圈22减法得$A\ge B$，蓝圈11减法得$B\ge C$，绿圈12减法得$C\ge D$，所以$A\ge D$。又用橙圈12减法得$A+D\ge 1$，所以$A=1$。
-
-和连续减法类似，解环时一般不需要很小心地选取起始点，从很多地方开始都能得到等价的结论。读者可以尝试在上面两个例子中选择其他起始点生成连续不等式。下面就提供另一种起始方式。
-
-\vspace{5mm}
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{trick/环4.png}
-\end{center}
-红圈22减法得$A=B$，蓝圈21减法得$C\ge B$，绿圈11减法得$D\ge C$，橙圈22减法得$E\ge D$，所以$E\ge A$。又因为粉圈1，$A+E\le 1$，所以$A=0$。
-
-\vspace{5mm}
-有时环不一定是方方正正的。只要逻辑上成环即可。
-
-\vspace{5mm}
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{trick/环5.png}
-\end{center}
-红圈42减法得$A\ge B$，蓝圈23减法得$B\ge C$，绿圈22减法得$C=D$，所以$A\ge D$。又由橙圈21减法得$E\ge D$，由粉圈3得$A+E\le 1$，所以$D=0$。
-
-\vspace{5mm}
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{trick/环6.png}
-\end{center}
-红圈22减法得$A\ge B$，绿圈22减法得$C\ge A$，蓝圈23减法得$D\ge C$，橙圈42减法得$E\ge D$且$F\ge D$，所以$E\ge B$且$F\ge B$。粉圈32减法得$G\ge B$。又因为黑圈3，$E+F+G=2$，所以$B=0$。
-
-\vspace{5mm}
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{trick/环7.png}
-\end{center}
-红圈42减法得$A\ge B$，蓝圈11减法得$B\ge C$，绿圈12减法得$C\ge D$，橙圈22减法得$D=E$，粉圈33减法得$E\ge A$，所以$A=B=C=D=E$。回顾用过的所有减法得红框为雷，蓝框安全。
+不等式在Puzzle中应用非常频繁，在Game中常用来解\nameref{cycle}。
 
 \subsection{数雷}
 有时我们知道总雷数，相当于知道了整个区域中的雷数。自然地，这个区域也可以和其他区域做减法。因为这个区域最大，所以第一步减法的结果一定是排除掉了一些格子，得到剩下格子的雷数。后续可以进一步排除，也可以当作普通区域做减法等操作。
