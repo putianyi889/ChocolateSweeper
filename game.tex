@@ -45,15 +45,29 @@
 \subsection{挖坑}
 挖坑实际上就是减法和连续减法的反复应用过程。这里给出挖坑时经常遇到的情况。挖坑重要的是方法而不是定式。
 
-\vspace{5mm}平面、边缘挖坑：
+\vspace{5mm}第一步挖坑：
 \begin{center}
     \includegraphics[scale=0.6]{game/挖坑1.png}
 \end{center}
+1和4可以应用单步减法，2和3不行。1可以下挖，4下方是雷墙。
 
-\vspace{5mm}拐角挖坑：
+\vspace{5mm}第二步挖坑：
 \begin{center}
     \includegraphics[scale=0.6]{game/挖坑2.png}
 \end{center}
+继续应用单步减法可以知道小数字（左两图）可以继续下挖，大数字（中两图）下方是雷墙，此外还可以在第二层上应用减法（右两图）。
+
+\vspace{5mm}第三步挖坑：
+\begin{center}
+    \includegraphics[scale=0.6]{game/挖坑3.png}
+\end{center}
+利用得到的信息可以继续应用减法推下去，这里仅举几个例子。
+
+\vspace{5mm}拐角挖坑：
+\begin{center}
+    \includegraphics[scale=0.6]{game/挖坑4.png}
+\end{center}
+有时可以利用侧面的信息进行判断，多数情况下单步减法就可以解决。这里举的是比较少见的需要用连续减法的例子。
 
 \subsection{环}\label{cycle}
 环只会在中间开局时遇到。不等式可以解环。环的花样比挖坑更多，所以更需要掌握方法。
